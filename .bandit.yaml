@@ -1,3 +1,4 @@
+---
 # Bandit config file.
 # BEWARE: Bandit does not use any configuration file by default
 #         so you need to specify it using -c.
