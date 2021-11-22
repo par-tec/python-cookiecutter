@@ -17,10 +17,11 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
+
   test-tox-job:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
-    container: python:3.8-slim
+    container: python:3.9-slim
 
     # This stanza deploys a service container with
     #   the "rabbit" hostname. This is commented
@@ -44,7 +45,19 @@ jobs:
       #                fetch-depth: 0
       - uses: actions/checkout@v2
 
-      - name: Run tests
+      - name: Run tests.
         run: |
           pip3 install tox
           tox
+  test-pre-commit:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+    container: python:3.9
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Run commit hooks.
+        run: |
+          pip3 --no-cache-dir install pre-commit
+          git --version
+          pre-commit run -a
