@@ -28,3 +28,5 @@ jobs:
           #   you can re-enable it if you align your local isort with
           #   the one in the super-linter image.
           VALIDATE_PYTHON_ISORT: false
+          VALIDATE_XML: false
+          VALIDATE_NATURAL_LANGUAGE: false
