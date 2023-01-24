@@ -7,8 +7,12 @@ name: "security-bandit"
 on:
   push:
     branches: [ "main" ]
+    paths-ignore:
+      - "ISSUE_TEMPLATE/**"
   pull_request:
     branches: [ "main" ]
+    paths-ignore:
+      - "ISSUE_TEMPLATE/**"
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
