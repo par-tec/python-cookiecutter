@@ -28,7 +28,7 @@ jobs:
 
     # Runs a single command using the runners shell
     - name: Python security check using Bandit
-      uses: ioggstream/bandit-report-artifacts@v0.0.2
+      uses: ioggstream/bandit-report-artifacts@v1.7.4
       with:
         project_path: .
         config_file: .bandit.yaml
