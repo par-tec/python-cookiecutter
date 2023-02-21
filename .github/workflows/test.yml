@@ -60,4 +60,7 @@ jobs:
         run: |
           pip3 --no-cache-dir install pre-commit
           git --version
+          pwd
+          ls -la
+          pre-commit install
           pre-commit run -a
