@@ -64,3 +64,8 @@ jobs:
           ls -la
           pre-commit install
           pre-commit run -a
+
+      - uses: actions/upload-artifact@v3
+        with:
+          name: pre-commit.log
+          path: /github/home/.cache/pre-commit/pre-commit.log
