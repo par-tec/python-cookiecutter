@@ -38,14 +38,14 @@ Each pull request should be associated with an issue and a branch.
         GH=ioggstream  # use your github username
         git clone -o par-tec https://github.com/par-tec/python-cookiecutter
         cd python-cookiecutter
-        git remote add origin git@github.com:$GH/python-cookiecutter.git
+        git remote add origin git@github.com:${GH}/python-cookiecutter.git
 
 1. Create a branch for your PR fetching from the main branch, using your username and issue-number as branch name.
    Before checkout, make sure you have the latest version of the `par-tec/main` branch.
 
         ISSUE=123  # use the issue number
         git fetch --all
-        git checkout -b $GH-$ISSUE par-tec/main
+        git checkout -b ${GH}-${ISSUE} par-tec/main
 
 1. Make your changes (this includes [pre-commit checks](#pre-commit)) and review them when adding.
    This is an important and overlooked step, especially when
@@ -59,6 +59,25 @@ Each pull request should be associated with an issue and a branch.
 
         git add .
         git commit -m "Fix: #$ISSUE"
+
+1. Now you can push the branch on your fork and create the PR.
+   If your branch is published on your fork, you can create the PR directly
+   from github.
+
+        git push origin ${GH}-${ISSUE}
+
+   When opening the PR from the web interface, please indicate:
+
+   - if the PR is a draft one, prefixing it with the `WIP:` string
+     or using the **draft PR** functionality of github;
+   - the target branch, e.g. `par-tec/main`;
+   - what has been done, including the fixed issues (e.g. `Fix: #123`);
+   - when useful, describe the solution.
+
+1. Once the PR is merged, you can delete your local and remote branches,
+   and fetch the latest version from the upstream repository.
+   The code-hosting platform can be configured to automatically remove
+   remote branches automatically after merge.
 
 ## CI
 
