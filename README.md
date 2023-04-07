@@ -26,11 +26,20 @@ To enable the virtual environment, use this command:
 poetry install
 ```
 
-To use the virtualenvironment, use this command:
+To use the virtual environment, use this command:
 
 ```bash
 poetry shell
 ```
+
+To add a dependency, use this command:
+
+```bash
+poetry add <package>
+```
+
+When install or add dependencies, file `poetry.lock` is created. This file is used to track all dependencies used
+in the project, so is a good practice commit it in the repository.
 
 Besides all the explanations in the [CONTRIBUTING.md](CONTRIBUTING.md) file, you can use the docker-compose file
 (e.g. if you prefer to use docker instead of installing the tools locally)
