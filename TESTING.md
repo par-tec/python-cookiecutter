@@ -10,8 +10,14 @@ For example, a modern application relies on many moving parts, including contain
 ```mermaid
 graph LR
 
+classDef dev stroke: red
+classDef ctx stroke: lightgreen
+
+subgraph sut ["In red: the system under development"]
+direction LR
+
 load-balancer((Load\nBalancer))
-backend[[Application]]
+backend[[Application]]:::dev
 datastore[(Datastore)]
 backend-services[[Back End Services]]
 vault[(Vault)]
@@ -19,9 +25,9 @@ authnz([Authorization &\n Authentication])
 
 Client --> load-balancer  --> backend --> datastore & backend-services
 Client & backend --> authnz
-
 backend & backend-services  --> vault
 
+end
 ```
 
 Containerization helps in recreating enviroments that are similar to production,
