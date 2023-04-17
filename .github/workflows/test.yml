@@ -60,4 +60,16 @@ jobs:
         run: |
           pip3 --no-cache-dir install pre-commit
           git --version
+          pwd
+          ls -la
+          pre-commit install
           pre-commit run -a
+
+      # Store (expiring) logs on failure.
+      # Retrieve artifacts via `gh run download`.
+      - uses: actions/upload-artifact@v3
+        if: failure()
+        with:
+          name: pre-commit.log
+          path: /github/home/.cache/pre-commit/pre-commit.log
+          retention-days: 5

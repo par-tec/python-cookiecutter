@@ -9,6 +9,13 @@ Repository for boilerplate workflows and CI for python projects.
 └── workflows
 ```
 
+## Creating a new project
+
+The name of a new project should be descriptive and short.
+The repository name should be in [kebab-case](https://it.wikipedia.org/wiki/Kebab_case), string, e.g., `python-cookiecutter`,
+`api-onboarding`.
+Avoid CamelCase or underscores: you can use them for OOP classes or properties.
+
 ## Contributing
 
 Please, see [CONTRIBUTING.md](CONTRIBUTING.md) for more details on:
