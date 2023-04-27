@@ -52,7 +52,7 @@ if the PR already exists, you can just start working from it.
    If the PR already exists, you can continue to work on it, always fetching the latest version
    and ensuring that your working copy is up to date. Otherwise, you risk to work waste time
    resolving conflicts.
-   
+
         git fetch --all  # Always download latest changes
         git checkout par-tec/${BRANCH}
 
@@ -95,7 +95,7 @@ if the PR already exists, you can just start working from it.
    - ask for a review if you have the associated permissions
      (e.g. "Add reviewers" on github);
    - proof-read it from the code-hosting platform WebUI, tag colleagues
-     or [suggest changes](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/incorporating-feedback-in-your-pull-request) 
+     or [suggest changes](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/incorporating-feedback-in-your-pull-request)
 
    This project requires that PRs are rebased before being merged,
    in order to ensure a clear history.
