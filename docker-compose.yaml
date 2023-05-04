@@ -13,7 +13,7 @@ services:
     volumes:
     - .:/code
   super-linter:
-    image: github/super-linter
+    image: github/super-linter:v3.15.5
     environment:
     - RUN_LOCAL=true
     - VALIDATE_MARKDOWN=false
