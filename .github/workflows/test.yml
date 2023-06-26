@@ -63,7 +63,7 @@ jobs:
           pwd
           ls -la
           id
-          git config --global --add safe.directory /__w/python-cookiecutter/python-cookiecutter
+          git config --global --add safe.directory $PWD
           pre-commit install
           pre-commit run -a
 
