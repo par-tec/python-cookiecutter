@@ -1,6 +1,6 @@
-# .github
+# Python Cookiecutter repository
 
-Repository for boilerplate workflows and CI for python projects.
+Python template repository including boilerplate workflows and CI.
 
 ```bash
 .bandit.yaml
@@ -34,3 +34,19 @@ Besides all the explanations in the [CONTRIBUTING.md](CONTRIBUTING.md) file, you
 ```bash
 docker-compose run pre-commit
 ```
+
+## Testing github actions
+
+Tune the Github pipelines in [.github/workflows](.github/workflows/).
+
+To speed up the development, you can test the pipeline with [act](https://github.com/nektos/act).
+Installing `act` is beyond the scope of this document.
+
+To test the pipeline locally and ensure that secrets (e.g., service accounts and other credentials)
+are correctly configured, use:
+
+ ```bash
+ # Run a specific job in the pipeline
+ act -j test -s CI_API_TOKEN="$(cat gh-ci.json)" \
+      -s CI_ACCOUNT=my-secret-account
+ ```
