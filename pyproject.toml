@@ -1,0 +1,22 @@
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "python-cookiecutter"
+version = "0.0.1"
+description = "This is a Python Cookiecutter reposityr"
+authors = [
+    "A user <me@me.com>"
+]
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+[tool.poetry.dependencies]
+python = "^3.11"
+
+[tool.poetry.group.test.dependencies]
+tox = "^4.4.7"
+pytest = "^7.2.2"
