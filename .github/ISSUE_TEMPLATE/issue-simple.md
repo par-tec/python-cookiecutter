@@ -22,9 +22,9 @@ I do:
 
 ## Instead
 
-- 
-- 
-- 
+-
+-
+-
 
 ## Notes
 

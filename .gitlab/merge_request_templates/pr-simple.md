@@ -1,10 +1,10 @@
 ## This PR
 
-- [ ] 
+- [ ]
 - [ ]
 - [ ]
 
-## It's done 
+## It's done
 
 - Rationale of the implementation
 
