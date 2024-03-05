@@ -4,12 +4,9 @@ about: Minimal Issue Template
 title: '[bug]: '
 labels: ''
 assignees: ''
-
 ---
 
-## When (optional)
-
-I do:
+## When I (optional)
 
 1. xx
 1. xx
