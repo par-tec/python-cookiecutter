@@ -11,6 +11,16 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
+permissions:
+  read: all
+  # 
+  # To deploy on gh-pages, you need the following.
+  # content: write 
+  #
+  # To post comments on issues/PR you need the following.
+  # issues: write
+  # pull-request: write
+  
 jobs:
   build:
     # The type of runner that the job will run on
