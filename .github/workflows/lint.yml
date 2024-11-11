@@ -4,9 +4,11 @@ name: Lint
 
 on:
   push:
-    branches: ["main"]
+    branches:
+    - main
   pull_request:
-    branches: [ "main" ]
+    branches:
+    - main
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -20,7 +22,7 @@ permissions:
   # To post comments on issues/PR you need the following.
   # issues: write
   # pull-request: write
-  
+
 jobs:
   build:
     # The type of runner that the job will run on
