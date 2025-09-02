@@ -3,7 +3,6 @@
 #
 # $ docker-compose up processor
 #
-version: "3.9"
 services:
   pre-commit:
     build:
