@@ -18,11 +18,14 @@ jobs:
 
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Super-Linter
-        uses: github/super-linter@v3.15.5
+        uses: super-linter/super-linter@v8
         env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           VALIDATE_MARKDOWN: false
           # Disabled for conflicts with the isort version used in pre-commit
           #   you can re-enable it if you align your local isort with
