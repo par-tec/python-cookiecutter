@@ -22,7 +22,6 @@ services:
     - IGNORE_GITIGNORED_FILES=true
     volumes:
     - .:/tmp/lint/
-    - ./tox.ini:/action/lib/.automation/.flake8
   # This container will run successfully
   # only if all dependencies return no errors.
   test:
