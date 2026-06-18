@@ -1,0 +1,7 @@
+# Ruff config — replaces black (format), isort (import sort), flake8, autoflake.
+line-length = 88            # matches black's default wrapping
+
+[lint]
+# E,F enabled by default → F401 (unused imports) + F841 (unused vars) replace autoflake.
+extend-select = ["I"]       # import sorting (isort); black profile is ruff's default
+ignore = ["E501"]           # tolerate long lines (links) — matches old flake8 max-line-length=150 intent
